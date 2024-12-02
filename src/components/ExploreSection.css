@@ -1,0 +1,199 @@
+/* General Explore Section Styling */
+.explore-section {
+  padding: 40px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow-y: auto;
+  height: calc(100vh - 240px);
+  animation: gradient-animation 6s infinite alternate;
+}
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+
+/* Heading */
+.explore-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #74a2d0, #5285d7);
+  background-clip: text;
+  color: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.explore-heading:hover {
+  color: #fff;
+  background: linear-gradient(45deg, #00d2ff, #3a7bd5, #1e2a47);
+  background-clip: text;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* Explore Section Wrapper */
+.explore-section {
+  padding: 40px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;  /* Ensure the container takes full width */
+}
+
+/* Search Bar */
+.search-bar {
+  width: 90%;  /* Set width to 90% of the container */
+  max-width: 1000px;  /* Set a maximum width */
+  margin-bottom: 30px;  /* Add space below */
+}
+
+.search-bar input {
+  width: 100%;  /* Ensure the input fills the width of the container */
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 25px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Explore Posts Grid */
+.explore-posts {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;  /* Increased gap between posts */
+  margin-top: 20px;
+}
+
+.post-card {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  height: 400px;  /* Increased height of posts */
+}
+
+.post-card img {
+  width: 100%;
+  height: 100%;  /* Fill the entire height */
+  object-fit: cover;
+}
+
+.post-info {
+  padding: 20px;  /* Increased padding for better spacing */
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  height: 100px;  /* Adjusted height for post information */
+}
+
+.post-info h3 {
+  font-size: 20px;  /* Increased font size */
+  color: #f8a32d;
+  margin-bottom: 10px;
+}
+
+.post-info p {
+  font-size: 16px;  /* Increased font size */
+  color: #ddd;
+}
+
+/* Top Creators Section */
+.top-creators {
+  position: absolute;
+  top: 20%;
+  right: 13px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: 166px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.top-creators h3 {
+  color: #f8a32d;
+  text-align: center;
+  font-size: 22px;
+}
+
+.creator-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.creator-card {
+  text-align: center;
+}
+
+.creator-card img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: 4px solid #f8a32d;
+}
+
+.creator-card p {
+  color: #f8a32d;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* Animation for Heading */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 2;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .explore-posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .post-card {
+    height: 350px;  /* Slightly smaller posts for tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .post-card {
+    height: 320px;  /* Slightly smaller posts for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-posts {
+    grid-template-columns: 1fr;
+  }
+  .post-card {
+    height: 280px;  /* Smallest posts for mobile */
+  }
+}

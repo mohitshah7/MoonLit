@@ -1,0 +1,130 @@
+.snippet-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  background: radial-gradient(circle, #1b1b2f, #111); /* Starry background effect */
+  animation: gradient-animation 6s infinite alternate;
+  width: 100%;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 10%; }
+  100% { background-position: 100% 90%; }
+}
+
+.story-container {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 35px;
+  padding-top: 16px;
+  padding-left: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  margin-bottom: 20px; /* Space between snippet container and this container */
+  width: 100%; /* Ensure it stretches to full width */
+  min-width: 100%;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  width: 150px; /* Keep the width fixed */
+  height: 150px; /* Keep the height fixed */
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  border-radius: 50%; /* Ensure it's always circular */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.story:hover {
+  transform: rotate(5deg) scale(1.1);
+  border-color: #773ac7;
+  box-shadow: 0 12px 24px  #773ac7;
+}
+
+.create-story {
+  background: linear-gradient(135deg, #773ac7, #e254df);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px; /* Keep fixed width and height */
+  height: 150px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.create-story .add-story-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.create-story:hover {
+  transform: scale(1.2);
+  box-shadow: 0 10px 20px #773ac7;
+}
+
+.story img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.story p {
+  margin-top: 8px;
+  color: #ffcc00;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.selected-snippet-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  height: 500px; /* Increased height for a standing rectangle */
+  max-width: 750px; /* Max width */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin-top: 20px; /* Add some spacing from the snippet section */
+
+  
+}
+
+/* Style for viewed stories */
+.story.seen {
+  border-color: gray;
+  opacity: 0.6;
+  box-shadow: none;
+  cursor: default;
+}
+
+.story.seen:hover {
+  transform: none; /* Disable hover effects for seen stories */
+  box-shadow: none;
+}
+
+
+
+.selected-snippet-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.selected-snippet-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
